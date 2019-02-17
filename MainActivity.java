@@ -21,17 +21,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Activity 의 UI를 R.layout.activity_main 으로 지정한다
         Toast.makeText(getApplicationContext(), "프로그래밍을 실행해보자!", Toast.LENGTH_LONG).show();
-
-        //레이아웃 button이라는 ID로 선언된 뷰에 클릭 이벤트 리스너 생성
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
-                // 버튼 클릭 시  count 1 증가
-                clickCount = clickCount + 1;
-                
-                // 버튼 클릭 시 count 증가후 해당 count 를 토스트 메세지로 
-                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
-            }
-        });
     }
 }
