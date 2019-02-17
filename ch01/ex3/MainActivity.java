@@ -18,23 +18,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Activity 의 UI 를 R.layout.activity_main 으로 지정함
+        // Activity 의 UI를 R.layout.activity_main 으로 지정함
         setContentView(R.layout.activity_main);
-        
-        // "프로그래밍을 시작해보자!" 메세지를 잠시 출력함
+
+        // "프로그래밍을 실행해보자!" 메세지 잠시 출력
         Toast.makeText(getApplicationContext(), "프로그래밍을 실행해보자!", Toast.LENGTH_LONG).show();
 
         //레이아웃 button이라는 ID로 선언된 뷰에 클릭 이벤트 리스너 생성
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
-                // 클릭 카운트 1 증가
+                // 클릭카운트 1 증가
                 clickCount = clickCount + 1;
-                
-                // 버튼이 클릭되면 클릭된 횟수를 증가하면서 토스트 메세지를 
-                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+
+                if(clickCount % 2 == 0)
+                    //클릭 카운트가 2의 배수이면 버튼이 클릭된 횟수를 잠시 보여줌
+                    Toast.makeText(getApplicationContext(), "ClickCount : " + clickCount, Toast.LENGTH_LONG).show();
+                else if (clickCount % 3 ==0)
+                    // 클릭카운트가 3의 배수이면 Hello, World 메세지를 잠시 보여줌
+                    Toast.makeText(getApplicationContext(), "Hello, World", Toast.LENGTH_LONG).show();
+                else
+                    // 클릭카운트가 2의 배수도, 3의 배수고 아니면 Hello 메세지를 잠시 보여줌
+                    Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG).show();
             }
         });
     }
 }
-
