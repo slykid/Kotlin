@@ -67,7 +67,14 @@
 - 마지막으로 설정 내용에 대한 요약본을 보여준다.
 
 ![default](https://user-images.githubusercontent.com/25294147/53683927-466e0380-3d4a-11e9-80c7-6173e9c2969b.PNG)
-<br><br>
+<br>
+
+- 설정이 완료되면 한 번 실행시켜보자
+- 정상적으로 동작한다면 아래와 같은 가상머신이 실행될 것이다.
+
+![default](https://user-images.githubusercontent.com/25294147/53683965-b086a880-3d4a-11e9-8996-b6fa8865fedb.PNG)
+<br>
+
 
 
 
